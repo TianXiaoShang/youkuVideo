@@ -1,0 +1,21 @@
+<!-- components/recommend/cmp.wxml -->
+<view class="container">
+    <view class="title">
+        <image mode="widthFix" class="titleIcon" src="/icon/titleIcon.png"></image>
+        <slot></slot>
+        <!-- <text class="byName">by:小伤伤</text> -->
+    </view>        
+        <view class="movieList">
+            <block wx:for="{{recommendData}}" 
+            wx:key="{{item.id}}" 
+            >
+                <view class="movieItem" 
+                data-tapId="{{urlType}}-{{item.id}}"  
+                bind:tap="onDetailRecommend">
+                    <image mode="widthFix" class="movieImg" src="{{item.image}}" />
+                    <view class="movieName">{{item.curriculum}}</view>
+                    <text class="detail">{{item.lecturer}}</text>
+                </view>
+            </block>
+        </view>
+</view>

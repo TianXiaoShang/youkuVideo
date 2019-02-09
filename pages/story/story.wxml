@@ -1,0 +1,30 @@
+<!-- pages/story/story.wxml -->
+<!-- <text>pages/story/story.wxml</text> -->
+<navigate>
+    <view name="title">假优酷视频 · 电影故事</view>
+</navigate>
+<view class="detailWrap" 
+bindtap="onStoryTap" 
+wx:for="{{storyData}}" 
+wx:key="{{item.id}}"
+data-tapId="{{item.id}}"
+>
+    <image mode="widthFix" class="videoImg" src="{{item.image}}"></image>
+    <view class="videoInfo">
+        <text class="describe">{{item.name}}</text>
+        <text class="update">{{item.add_time}}</text>
+        <image 
+        wx:if="{{!item.addStar}}"
+        data-tapId="{{item.id}}"        
+        catch:tap="onAddStoryStar" 
+        src="image/star.png" 
+        class="story-star"></image>
+        <image 
+        wx:if="{{item.addStar}}"
+        data-tapId="{{item.id}}"        
+        catch:tap="onAddStoryStar" 
+        src="image/star-active.png" 
+        class="story-star"></image>
+   </view>
+</view>
+<view class="noMoreData">哎呀！触碰到人家底线啦...</view>

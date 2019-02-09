@@ -1,0 +1,125 @@
+/* components/videoCard/cmp.wxss */
+/* 电影故事和电影wrap部分 */
+.VideoListWrap{
+    position:relative;
+    display:flex;
+    align-items: center;
+    width:92%;
+    margin: 0 auto;
+    margin-top:30rpx;
+    padding:20rpx 12rpx;
+    border-radius: 20rpx;
+    background: rgb(236, 236, 236);
+    border-bottom:2rpx solid #bbb;
+}
+
+.wrapLeft{
+    background: rgb(126, 126, 126);
+    animation: runL 0.2s linear 1;
+}
+
+@keyframes runL {
+    0%{
+        left:-750rpx;
+    }
+    100%{
+        left:0rpx;
+    }
+}
+@keyframes runR {
+    0%{
+        left:750rpx;
+    }
+    100%{
+        left:0rpx;
+    }
+}
+
+
+.historyImg{
+    width:210rpx;
+    min-width:210rpx;
+    margin-right:20rpx;
+}
+.infoWrap{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+    padding-bottom:28rpx;
+}
+/* 固定行数，实现多行溢出打点 */
+.describe{
+    letter-spacing:2rpx;
+    font-size:26rpx;
+    line-height:45rpx;
+    display:inline-block;
+    width:100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.videoDescribe{
+    color:white;
+    height:45rpx;
+    -webkit-line-clamp: 1;
+}
+.cancel{
+    position: absolute;
+    bottom:-10rpx;
+    right:32rpx;
+    font-size:22rpx;
+    padding:4rpx 8rpx;
+    border-radius:10rpx;
+    color:rgb(136, 136, 136);
+}
+.videoCancel{
+    color:white;
+}
+
+.hintWrap{
+    width:80%;
+    margin:auto;
+    margin-top:280rpx;
+}
+.empty{
+    display: block;
+    margin:auto;
+    width:80%;
+}
+.hint{
+    display: block;
+    font-size:32rpx;
+    color:#666;
+    margin: 0 auto;
+    text-align:center;
+    letter-spacing: 4rpx;
+}
+
+.videoName{
+    font-size:30rpx;
+    color:white;
+}
+
+
+
+/* 空空如也 */
+.hintWrap{
+    width:80%;
+    margin:auto;
+    margin-top:280rpx;
+}
+.empty{
+    display: block;
+    margin:auto;
+    width:80%;
+}
+.hint{
+    display: block;
+    font-size:32rpx;
+    color:#666;
+    margin: 0 auto;
+    text-align:center;
+    letter-spacing: 4rpx;
+}

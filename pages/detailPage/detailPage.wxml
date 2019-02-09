@@ -1,0 +1,53 @@
+<!-- pages/detailPage/detailPage.wxml -->
+<navigate>
+    <view name="title">
+        <image src="/icon/goBack.png" />
+        假优酷视频 > {{curriculum}}
+        </view>
+</navigate>
+<view>
+    <view class="video-wrap">
+        <video class="video" id="detailVideo" src="{{videoUrl}}"></video>            
+        <!-- 楼下这行fillImage，在资源加载回来之前使用会报错，把fillImage放入if条件内可解决这个问题 -->
+        <cover-image wx:if="{{fillImage && videoPlay}}" class="fillImage" src="{{fillImage}}" ></cover-image>
+        <cover-image wx:if="{{fillImage && videoPlay}}" class="fillIcon" bind:tap="onVideoPlay" src="image/play.png"></cover-image>        
+    </view>
+    <view class="video-info">
+        <view class="video-name">{{curriculum}}</view>
+        <image wx:if="{{!addStar}}" bind:tap="onAddFavs" src="image/star.png" class="video-star" data-likeId="{{videoId}}"></image>
+        <image wx:else bind:tap="onDeleteFavs" src="image/star-active.png" class="video-star" data-likeId="{{videoId}}"></image>
+        <image src="image/share.png" class="video-share"></image>
+    </view>
+    <scroll-view class="actor" scroll-x="true">
+        <view class="actor-item" wx:for="{{actor}}" wx:key="{{index}}">
+            <image class="actor-img" src="{{item.image}}"></image>
+            <view class="actor-name">{{item.Fullname}}</view>
+        </view>
+    </scroll-view>
+    <view class="detail-control" catch:tap="onShowDetail">
+        <text wx:if="{{!detailShowControl}}" class="control-title">展开简介</text>
+        <text wx:else class="control-title">收起简介</text>
+        <image class="{{controlIcon}}" src="image/control.png"></image>
+        <scroll-view scroll-y class="detail-content" wx:if="{{detailShowControl}}" catch:tap="null">
+               {{lecturer}}
+        </scroll-view>
+    </view>
+    <view class="comment">
+        <view class="comment-title">精彩影评</view>
+        <!-- <view class="comment-content">内容区</view> -->
+    </view>
+        <view class="comment-input" style="bottom:{{myHeight}}">
+            <textarea 
+            class="comment-text"
+            placeholder="期待您的神评..." 
+            maxlength="200"
+            placeholder-style="color:#bbb;font-size:20rpx" 
+            show-confirm-bar="{{false}}"
+            adjust-position="{{false}}"
+            bindfocus="onMessages"
+            bindblur="endMessages"
+            value="{{messageText}}"
+            ></textarea>
+            <image class="{{commentEmit}}" catch:tap="onCommentEmit" src="image/emit.png"></image>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents":{
+      "navigate":"/components/navigate/cmp",
+      "storyCard":"/components/storyCard/cmp"
+  }
+}

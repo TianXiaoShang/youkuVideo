@@ -1,0 +1,16 @@
+<!--pages/markList/markList.wxml-->
+<navigate>
+    <view name="title">
+        <image src="/icon/goBack.png" />
+        个人中心 > 我的收藏
+        </view>
+</navigate>
+<storyCard 
+markList="{{markList}}" 
+dataLength="{{dataLength}}" 
+cancelText="{{cancelText}}"
+catch:onCancelStory="cancelMark"
+catch:onTapMark="onTapMark"
+></storyCard>
+
+

@@ -1,0 +1,74 @@
+<!-- pages/private/private.wxml -->
+<navigate>
+    <view name="title">假优酷视频 · 个人中心</view>
+</navigate>
+<view class="infoWrap">
+    <image wx:if="{{unLogin}}" class="wallBg" mode="widthFix" src="/icon/headBgImage.png"></image>
+    <image wx:if="{{!unLogin}}" class="wall" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+    <view class="userInfoWrap">
+        <view class="head">
+            <image class="headImage" src="{{userInfo.avatarUrl || '/icon/headImage.png'}}"></image>
+        </view>
+        <button wx:if="{{unLogin}}" open-type="getUserInfo" class="unLog" bindgetuserinfo="onLogIn">点击登录</button>        
+        <view wx:if="{{!unLogin}}" class="userInfo">
+            <view class="userName">{{userInfo.nickName}}</view>
+            <view class="userLv">
+                <view class="lvType">等级</view>
+                <view class="lvNumber">LV.{{LVnum}}</view>
+            </view>
+            <view class="userSign">签名：底层大佬前端开发团队，一个充满无限可能的角落(by:小伤伤)</view>
+        </view>
+    </view>
+</view>
+<view class="signInWrap">
+    <view wx:if="{{unLogin}}" class="signInMasking">请登录后使用哦~</view>
+    <view class="signInInfo">
+        <view class="sign" bind:tap="onSignIn">签到</view>
+        <view class="integral">{{signNum || 0}}积分</view>
+    </view>
+</view>
+
+<view class="contentWrap">
+    <view class="likeVideo" bind:tap="onLikeList">
+        <image class="LMIcon" src="/icon/myLike.png"></image>
+        <text class="LMList">我喜欢</text>
+        <text class="LMCounter">{{likeLength}}</text>
+    </view>
+    <view class="markVideo" bind:tap="onMarkList">
+        <image class="LMIcon" src="/icon/myMark.png"></image>
+        <text class="LMList">我的收藏</text>
+        <text class="LMCounter">{{myMarkCounter}}</text>
+    </view>
+    <view class="browseHistory" bind:tap="onbrowseHistory">
+        <image class="LMIcon" src="/icon/see.png"></image>
+        <text class="LMList">浏览历史</text>
+        <text class="LMCounter">{{myHistoryCounter}}</text>
+    </view>
+
+
+    <!-- <view class="browseHistory">
+        <view class="historyTitle">最近浏览</view>
+        <scroll-view scroll-x="true" class="scrollView">
+             <view class="item">
+                <image class="videoImg" src="http://www.thexxdd.cn/media/goods/images/yinxiongimg.jpg"></image>
+                <view class="videoName">英雄本色</view>
+            </view>
+            <view class="item">
+                <image class="videoImg" src="http://www.thexxdd.cn/media/goods/images/gushi1.jpg"></image>
+                <view class="videoName">《一出好戏》有着喜剧的皮囊，还有着灾难片的类型属性，但骨子里是一出悲剧，是一部有中国特色的人性悲剧。导演黄渤有野心，但他也能够把野心落实到朴素的细节当中去，让观众感受到人在现实困境下的真实变化。</view>
+            </view>
+             <view class="item">
+                <image class="videoImg" src="http://www.thexxdd.cn/media/goods/images/yinxiongimg.jpg"></image>
+                <view class="videoName">英雄本色</view>
+            </view>
+            <view class="item">
+                <image class="videoImg" src="http://www.thexxdd.cn/media/goods/images/yinxiongimg.jpg"></image>
+                <view class="videoName">英雄本色</view>
+            </view>
+            <view class="item">
+                <image class="videoImg" src="http://www.thexxdd.cn/media/goods/images/gushi1.jpg"></image>
+                <view class="videoName">《一出好戏》有着喜剧的皮囊，还有着灾难片的类型属性，但骨子里是一出悲剧，是一部有中国特色的人性悲剧。导演黄渤有野心，但他也能够把野心落实到朴素的细节当中去，让观众感受到人在现实困境下的真实变化。</view>
+            </view>
+        </scroll-view>
+    </view> -->
+</view>

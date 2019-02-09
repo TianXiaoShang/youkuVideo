@@ -1,0 +1,86 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wxdb28793c2ab59aa8",
+	"projectname": "myMovie",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "故事",
+					"pathName": "pages/story/story",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "故事详情",
+					"pathName": "pages/storyDetail/storyDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "电视",
+					"pathName": "pages/detailPage/detailPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/private/private",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/markList/markList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "浏览历史",
+					"pathName": "pages/browseHistory/browseHistory",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我喜欢",
+					"pathName": "pages/likeList/likeList"
+				}
+			]
+		}
+	}
+}

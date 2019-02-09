@@ -1,0 +1,46 @@
+<!-- components/seach/seach.wxml -->
+<view>
+    <view class='search-wrap'>
+        <icon type="search" class="search-icon" size="35rpx" />
+        <input 
+        type="text"
+        confirm-type="GO"
+        class="search-input" 
+        placeholder="请输入电影、演员" 
+        maxlength="18" 
+        placeholder-style="color:#bbb;font-size:30rpx" 
+        value="{{value}}"
+        bindinput='onInput'
+        bindfocus="bindfocus"
+        bindblur="bindblur"
+        ></input>
+        <icon wx:if="{{myShow}}" type="cancel" class="search-icon" size="40rpx" color="#00BFFF" bindtap="watchClose" />
+        <view wx:if="{{myShow}}" class="data-container" catch:tap="onTapContainer">
+            <view class="antistopWrap">
+                <view class="hotAntistop">人气热搜</view>
+                <view 
+                class="antistopItem" 
+                wx:for="{{antistop}}" 
+                wx:key="*this"
+                bind:tap="onSearchName"
+                data-SearchName="{{item}}"
+                >{{item}}</view>
+                
+                <view 
+                class="searchVideo" 
+                wx:for="{{videoList}}" 
+                wx:key="{{index}}" 
+                bind:tap="onSearchVideo"
+                data-id="{{item.id}}"
+                >
+                    <image class="videoCover" mode="widthFix" src="{{item.name.image}}"></image>
+                    <view class="info">
+                        <text class="videoName">《{{item.name.curriculum}}》</text>
+                        <text class="videoIntro">{{item.name.lecturer}}</text>
+                    </view>
+                </view>
+            </view>
+            <!-- <view wx:if="{{!searchLength}}" class="nomorr">没有找到您想要的电影哦！</view> -->
+        </view>
+    </view>
+</view>

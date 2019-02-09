@@ -1,0 +1,69 @@
+/* components/recommend/cmp.wxss */
+.container{
+    margin:25rpx 0;
+}
+/* .title{
+    margin:0 auto;
+} */
+.titleIcon{
+    float:left;
+    margin:22rpx 0 0 20rpx;
+    width:40rpx;
+}
+.title>text{
+    margin-top:15rpx;
+    margin-left:16rpx;
+    font-size: 34rpx;
+    font-weight: 600;
+    float:left;
+    color:black;
+}
+.title::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+/* .movieType{
+    float:left;
+    color:#00BFFF;
+} */
+/* .container .title .byName{
+    float:right;
+    font-size:20rpx;
+    margin-right:15rpx;
+    color:#00BFFF;
+} */
+
+.movieList{
+    display: flex;
+    flex-wrap:wrap;    
+    justify-content:space-between;
+    
+}
+.movieItem{
+    width:372rpx;
+    margin-top:35rpx;
+    border-bottom:2rpx solid #eee;
+}
+.movieImg{
+    width:100%;
+}
+.movieName{
+    width:90%;
+    margin:0 auto;
+    margin-bottom:8rpx;
+    font-size: 28rpx;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.detail{
+    display:block;
+    font-size: 25rpx;
+    color:#888;
+    width:90%;
+    margin:0 auto;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}

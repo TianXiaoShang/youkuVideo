@@ -1,0 +1,80 @@
+/* components/storyCard/cmp.wxss */
+.markListWrap{
+    position:relative;
+    width:92%;
+    margin: 0 auto;
+    display:flex;
+    margin-top:30rpx;
+    padding:20rpx 12rpx;
+    border-radius: 20rpx;
+    background: rgb(250, 250, 250);
+    border-bottom:2rpx solid #bbb;
+}
+.wrapRight{
+    animation: runR 0.2s linear 1;    
+}
+@keyframes runL {
+    0%{
+        left:-750rpx;
+    }
+    100%{
+        left:0rpx;
+    }
+}
+@keyframes runR {
+    0%{
+        left:750rpx;
+    }
+    100%{
+        left:0rpx;
+    }
+}
+.markImg{
+    max-width:210rpx;
+    min-width:210rpx;
+    margin-right:20rpx;
+}
+/* 固定行数，实现多行溢出打点 */
+.describe{
+    text-indent:60rpx;
+    letter-spacing:2rpx;
+    font-size:26rpx;
+    line-height:45rpx;
+    display:inline-block;
+    width:100%;
+    height:90rpx;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.cancel{
+    position: absolute;
+    bottom:15rpx;
+    right:32rpx;
+    font-size:22rpx;
+    padding:4rpx 8rpx;
+    border-radius:10rpx;
+    color:rgb(136, 136, 136);
+}
+
+.hintWrap{
+    width:80%;
+    margin:auto;
+    margin-top:280rpx;
+}
+.empty{
+    display: block;
+    margin:auto;
+    width:80%;
+}
+.hint{
+    display: block;
+    font-size:32rpx;
+    color:#666;
+    margin: 0 auto;
+    text-align:center;
+    letter-spacing: 4rpx;
+}

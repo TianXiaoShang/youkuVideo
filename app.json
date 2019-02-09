@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "components/search/cmp",
+    "pages/story/story",
+    "pages/private/private",
+    "pages/detailPage/detailPage",
+    "pages/storyDetail/storyDetail",
+    "pages/markList/markList",
+    "pages/browseHistory/browseHistory",
+    "pages/likeList/likeList"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "魔酷视频",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light",
+    "backgroundColo": "#f40",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "black",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "推荐",
+        "iconPath": "/icon/home.png",
+        "selectedIconPath": "/icon/home-active.png"
+      },
+      {
+        "pagePath": "pages/story/story",
+        "text": "故事",
+        "iconPath": "/icon/story.png",
+        "selectedIconPath": "/icon/story-active.png"
+      },
+      {
+        "pagePath": "pages/private/private",
+        "text": "我的",
+        "iconPath": "/icon/private.png",
+        "selectedIconPath": "/icon/private-active.png"
+      }
+    ]
+  }
+}

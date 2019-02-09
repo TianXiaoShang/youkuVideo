@@ -1,0 +1,21 @@
+<!--pages/storyDetail/storyDetail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<navigate>
+    <view name="title">
+        <image src="/icon/goBack.png" />
+        电影故事 > {{addStoryContent.curriculum}}
+        </view>
+</navigate>
+<view class="content-wrap">
+        <image class="content-bg" src="{{addStoryContent.image}}"></image>
+        <image mode="widthFix" class="cover" src="{{addStoryContent.image}}"></image>
+        <view class="info">
+            <view>{{addStoryContent.curriculum}}</view>
+            <view>地区：<text class="fillContent">{{addStoryContent.region}}</text></view>
+            <view>语言：<text class="fillContent">{{addStoryContent.language}}</text></view>
+            <view>类型：<text class="fillContent">{{addStoryContent.type}}</text></view>
+            <view>导演：<text class="fillContent">{{addStoryContent.director}}</text></view>
+            <view>主演：<text class="fillContent">{{addStoryContent.Tostar}}</text></view>
+        </view>
+</view>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>

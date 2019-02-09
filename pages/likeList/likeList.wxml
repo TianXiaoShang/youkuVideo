@@ -1,0 +1,13 @@
+<!--pages/likeList/likeList.wxml-->
+<navigate>
+    <view name="title">
+        <image src="/icon/goBack.png" />
+        个人中心 > 我喜欢
+        </view>
+</navigate>
+<videoCard
+markList="{{videoList}}" 
+dataLength="{{dataLength}}" 
+cancelText="{{cancelText}}"
+catch:onTapVideo="onTapVideo"
+></videoCard>

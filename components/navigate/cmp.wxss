@@ -1,0 +1,40 @@
+/* components/navigate/cmp.wxss */
+.navigate{
+    position: fixed;
+    top:0;
+    left:0;
+    padding-left:25rpx;
+    width:100%;
+    height:120rpx;
+    background: white;
+    z-index:999;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.navigate>view{
+    float: left;
+    width:68%;
+    font-weight:600;
+    font-size:28rpx;  
+    margin-top:62rpx;
+}
+.navigate>view>image{
+    margin-bottom:-4rpx;
+    width:15rpx;
+    height:28rpx;
+    margin-top:0rpx;
+    margin-right:8rpx;
+}
+.navigate>image{
+    margin-top:69rpx;
+    display: block;
+    float: left;
+    width:220rpx;
+    height:30rpx;
+}
+.masking{
+    width:100%;
+    background: white;
+    height:120rpx;
+}

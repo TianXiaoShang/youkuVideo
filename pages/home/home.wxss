@@ -1,0 +1,78 @@
+/* pages/index/index.wxss */
+
+.swiperWrap{
+    margin:10rpx auto;
+    width:750rpx;
+    height:400rpx;
+}
+.swiperImg{
+    width:100%;
+}
+
+.noMoreData{
+    font-size:28rpx;
+    color:#aaa;
+    text-align:center;
+    padding:12rpx;
+    animation: noMore 0.2s 2s 6;    
+}
+
+.loading{
+    position: absolute;
+    width:100%;
+}
+.loadingItem{
+    position: absolute;
+    left:0;
+    right:0;
+    margin: 0 auto 6rpx auto;
+    width:32rpx;    
+    height:36rpx;
+    opacity: 0.7;
+    animation: load 1.5s infinite;
+}
+.loadingLeft{
+    opacity: 0.7;
+    animation: load2 1.5s infinite;
+}
+
+@keyframes load{
+    0%{
+        transform:translate(-30rpx);
+    }
+    50%{
+        transform:translate(30rpx);
+    }
+    100%{
+        transform:translate(-30rpx);
+    }
+}
+@keyframes load2{
+    0%{
+        transform:translate(30rpx);
+        
+    }
+    50%{
+        transform:translate(-30rpx);
+        
+    }
+    100%{
+        transform:translate(30rpx);
+        
+    }
+}
+
+@keyframes noMore{
+    0%{
+        transform:translate(-50rpx);
+        color:rgb(4,193,236);
+    }
+    50%{
+        transform:translate(50rpx);
+        color:rgb(4,193,236);
+    }    
+    100%{
+        transform:translate(-50rpx);
+        color:rgb(4,193,236);
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "usingComponents":{
+        "movie-search":"/components/search/cmp",
+        "recommend-movie": "/components/recommendMovie/cmp",
+        "navigate":"/components/navigate/cmp"
+    }
+}

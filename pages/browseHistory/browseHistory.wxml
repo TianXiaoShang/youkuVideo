@@ -1,0 +1,33 @@
+<!--pages/browseHistory/browseHistory.wxml-->
+<navigate>
+    <view name="title">
+        <image src="/icon/goBack.png" />
+        个人中心 > 浏览历史
+        </view>
+</navigate>
+
+<view class="classify"  bind:tap="onchangerType" >
+    <view class="title" style="width:{{vWidth}}" data-type="vHistory">观看过视频</view>
+    <view class="title2" style="width:{{sWidth}}" data-type="sHistory">浏览过的电影故事</view>
+</view>
+
+    <view class="historyWrap" style="display:{{sHistory}}">
+        <storyCard 
+        markList="{{storyHistory}}" 
+        dataLength="{{SdataLength}}" 
+        cancelText="{{cancelText}}"
+        catch:onCancelStory="cancelStory"
+        bind:onTapMark="onTapStory"
+        ></storyCard>
+    </view>
+
+    <view class="historyWrap " style="display:{{vHistory}}">
+        <videoCard 
+        markList="{{videoHistory}}" 
+        dataLength="{{VdataLength}}" 
+        cancelText="{{cancelText}}"
+        catch:onCancelStory="cancelVideo"
+        bind:onTapVideo="onTapVideo"
+        ></videoCard>
+    </view>
+

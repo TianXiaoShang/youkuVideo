@@ -1,0 +1,6 @@
+<!--components/navigate/cmp.wxml-->
+<view class="masking"></view>
+<view class="navigate" bind:tap="onNavigate">
+    <slot slot="icon"></slot>   
+    <slot slot="title"></slot>     
+</view>

@@ -1,0 +1,16 @@
+<!--components/storyCard/cmp.wxml-->
+<view 
+class="markListWrap wrapRight" 
+wx:for="{{markList}}" 
+wx:key="{{index}}" 
+bindtap="onTapMark" 
+data-markId="{{item.id}}">
+    <image mode="widthFix" class="markImg" src="{{item.image}}"></image>
+    <text class="describe">{{item.name}}</text>
+    <text class="cancel" catch:tap="cancelMark" data-cancelId="{{item.id}}">{{cancelText}}</text>
+</view>
+
+<view class="hintWrap" wx:if="{{!dataLength}}">
+    <image class="empty" mode="widthFix" src="/icon/empty.png"></image>
+    <text class="hint">空空如也</text>
+</view>

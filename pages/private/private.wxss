@@ -1,0 +1,237 @@
+/* pages/private/private.wxss */
+.infoWrap{
+    position: relative;
+    height:100%;
+    height:360rpx;
+    background: #eee;
+    overflow: hidden;    
+}
+.wall{
+    width:100%;
+    filter: blur(10rpx);
+}
+.wallBg{
+    width:100%;
+}
+.unLog{
+    height:80rpx;
+    width:300rpx;
+    background: #EC4E57;
+    color:white;
+    line-height:80rpx;
+    text-align:center;
+    border-radius: 20rpx;
+    margin-left:30rpx;
+    letter-spacing:8rpx;
+}
+
+.userInfoWrap{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    margin:auto 0;
+}
+.head{
+    display: inline-block;
+    margin-left:25rpx;
+    height:170rpx;
+    width:170rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    border:4rpx solid rgba(253, 236, 236,0.5);
+}
+.headImage{
+    width:100%;
+    height:100%;    
+}
+
+.userInfo{
+    display: inline-block;
+    top:0;
+    bottom:0;
+    width:480rpx;
+    margin: 0 15rpx;
+    right:25rpx;
+    height:200rpx;
+    background: rgba(253, 236, 236,0.5);
+    padding:15rpx;
+    border-radius: 30rpx;
+    z-index:55;
+}
+
+.userName{
+    margin-bottom:20rpx;
+    font-size: 36rpx;
+}
+.lvType, .lvNumber{
+    float: left;
+    margin-right:12rpx;
+    font-size: 28rpx;
+    margin-bottom:12rpx;    
+}
+
+.lvNumber{
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#00BFFF), to(rgb(12, 205, 137)));
+    padding:0 12rpx;
+    border-radius:10rpx;
+    color:white;
+}
+.userLv::after{
+    content:'';
+    display: block;
+    clear:both;
+}
+.userSign{
+    font-size: 24rpx;
+}
+
+
+
+.signInWrap{
+    position: relative;
+    left:0;
+    right:0;
+    top:-35rpx;
+    margin:0 auto;
+    width:80%;
+    height:70rpx;
+    background:white;
+    border-radius:20rpx;
+    box-shadow:6rpx 8rpx 8rpx  #ddd;
+    overflow: hidden;
+}
+.signInWrap .signInMasking{
+    position: absolute;
+    background: rgb(230, 228, 228);
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height:70rpx;
+    font-size:24rpx;
+    opacity: 0.7;
+    z-index:5;
+}
+.signInWrap  .signInInfo{
+    position: absolute;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+.signInWrap  .sign,.integral{
+    font-size:28rpx;
+    min-width:160rpx;
+    height:46rpx;
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#00BFFF), to(rgb(12, 205, 137)));
+    border-radius:10rpx;
+    color:white;
+    line-height:46rpx;
+    text-align:center;
+}
+.signInWrap  .sign{
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#EB4C58), to(#FF8A30));
+}
+
+
+.contentWrap{
+    width:100%;
+    margin:0 auto;
+}
+
+
+
+.likeVideo , .markVideo, .browseHistory{
+    position:relative;
+    display: inline-block;
+    width:90%;
+    height:180rpx;
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#EB4C58), to(#FF8A30));
+    border-radius:30rpx;
+    margin-left:35rpx;
+    margin-bottom:30rpx;
+    /* box-shadow: 10rpx 10rpx 10rpx rgb(211, 211, 211);     */
+}
+.markVideo{
+    display: inline-block;
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#00BFFF), to(rgb(12, 205, 137)));    
+}
+.browseHistory{
+    background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#6E609E), to(#BD8FC4));    
+}
+.LMIcon{
+    margin-top:39rpx;
+    margin-left:15rpx;
+    width:102rpx;
+    height:102rpx;
+}
+.LMList{
+    color:white;
+    margin-left:15rpx;
+    line-height:180rpx;
+    font-size:36rpx;
+    letter-spacing:4rpx;
+}
+.LMCounter{
+    position:absolute;
+    right:35rpx;
+    top:10rpx;
+    margin-top:10rpx;
+    font-size:32rpx;
+    color:white;
+}
+
+
+/* .browseHistory{
+    width:93%;
+    margin: 0 auto;
+    background:rgb(255, 255, 255);
+    border-radius:0 0 30rpx 30rpx;
+    padding:0 0 20rpx 0;
+    border:1rpx solid #eee;
+    box-shadow: 10rpx 8rpx 8rpx #eee;
+
+}
+.historyTitle{
+    width:100%;
+    height:50rpx;
+    background:#c0c0c0;
+    margin:-4rpx auto 12rpx auto;
+    font-size:32rpx;
+    line-height:50rpx;
+    text-align:center;
+    color:white;
+}
+.scrollView{
+    margin: 0 auto;
+    width:95%;
+    white-space: nowrap;    
+}
+.contentWrap .scrollView .item{
+    display: inline-block !important;
+    margin: 0 6rpx 0 0;
+    width:31%;
+    height:100%;
+}
+.scrollView .item .videoImg{
+    width:100%;
+    height:126rpx;
+}
+.scrollView .item .videoName{
+    margin-top:4rpx;
+    font-size: 24rpx;
+    text-align:center;
+    width:100%;
+    line-height:26rpx;
+    height:52rpx;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+} */

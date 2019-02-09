@@ -1,0 +1,21 @@
+<!--components/videoCard/cmp.wxml-->
+<view 
+        class="VideoListWrap wrapLeft" 
+        wx:for="{{markList}}" 
+        wx:key="{{index}}" 
+        bind:tap="onTapvideoHistory" 
+        data-id="{{item.id}}"
+        data-type="{{item.type}}"
+        data-name="{{item.name || item.curriculum}}"
+        >
+            <image mode="widthFix" class="historyImg" src="{{item.image}}"></image>
+            <view class="infoWrap">
+                <view class="videoName">《{{item.name || item.curriculum}}》</view>
+                <view class="describe videoDescribe">{{item.lecturer || "暂无简介"}}</view>
+                <view class="cancel videoCancel" catch:tap="cancelVideo" data-cancelName="{{item.name || item.curriculum}}">{{cancelText}}</view>
+            </view>
+        </view>
+        <view class="hintWrap" wx:if="{{!dataLength}}">
+            <image class="empty" mode="widthFix" src="/icon/empty.png"></image>
+            <text class="hint">空空如也</text>
+        </view>

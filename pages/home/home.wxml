@@ -1,0 +1,32 @@
+<!-- pages/index/index.wxml -->
+<navigate>
+    <image name="icon" src="/icon/minAppName.png"></image>
+</navigate>
+<movie-search 
+bind:onInput="onInput" 
+bind:onTapName="onTapName"
+antistop="{{antistop}}" 
+flag="{{flag}}"
+tapVideo="{{tapVideo}}"
+searchVideo="{{searchVideo}}"
+></movie-search>
+<view class="homeWrapper" bind:touchstart="onTapWrap">
+    <swiper autoplay="{{true}}" indicator-dots="{{true}}" interval="{{2000}}" circular="{{true}}" class="swiperWrap">
+        <block wx:for="{{swiperData}}" wx:key="{{item.id}}">
+            <swiper-item class="swiperItem" data-tapId="{{broadcast}}-{{item.id}}" bind:tap="onSwiperTap">
+                <image mode="widthFix" src="{{item.image}}" class="swiperImg" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <recommend-movie recommendData="{{inlandRecommendData}}" urlType="{{details}}">
+        <text>大陆电影 ></text>
+    </recommend-movie>
+    <recommend-movie recommendData="{{HKRecommendData}}" urlType="{{daily}}">
+        <text>香港电影 ></text>
+    </recommend-movie>
+    <view wx:if="{{next}}" class="loading">
+        <image class="loadingItem loadingLeft" src="/icon/loadingLeft.png"></image>
+        <image class="loadingItem loadingRight" src="/icon/loadingRight.png"></image>
+    </view>
+    <view wx:if="{{!next}}" class="noMoreData">哎呀！触碰到人家底线啦...</view>
+</view>
