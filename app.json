@@ -43,5 +43,6 @@
         "selectedIconPath": "/icon/private-active.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
